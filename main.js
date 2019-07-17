@@ -16,19 +16,20 @@ function fizzBuzz(event) {
  clearList()
 
   
-  // TODO: Find the input box the user is typing in and put it in a variable.
+  // Find the input box the user is typing in and put it in a variable.
 
   const userInput=(document.querySelector('input'));
   console.dir(userInput);
-  // TODO: Use the variable you saved in the above step to dive deeper into the
+  // Use the variable you saved in the above step to dive deeper into the
   // object and find the value the user has added there. Make sure it's a
   // number, not a string. Save it to a variable.
-const userValue=(document.querySelector('.value'))
+const userValue=userInput.value
 console.dir(userValue);
   /*
     TODO: Print out the Fizzbuzz pattern up to that input.
     Use the pre-defined `printValue` function below to print out each line,
     giving it the value you want to print.
+
     
     Essentially, you can use `printValue` the same way you would `console.log`,
     only it will write to the DOM instead of to the console.
@@ -39,7 +40,64 @@ console.dir(userValue);
     As a stretch goal (wait until you've finished the basic FizzBuzz solution!),
     call `printValueStrong` instead of `printValue` for even-numbered items.
   */
+// let counter = 1
+// const counter = userValue
+//   while (counter<=userValue){
+//     if (userValue % 3 === 0){
+//     printValue('Fizz')
+//   }
+//     if(userValue % 5 === 0){
+//     printValue('Buzz')
+//   }
+//     if(userValue % 5 === 0 && userValue % 3 === 0){
+//     printValue('FizzBuzz')
+//     }
 
+//   else (printvalue(userValue))
+
+//   counter = counter + 1;
+// }
+let counter = 1;
+
+while (counter <=userValue) {
+ 
+ // If our counter is evenly divisible by 3
+ if (counter % 3 === 0) {
+   // check if it's evenly divisible by 5 too.
+   if (counter % 5 === 0) {
+    // If it is, print 'FizzBuzz'.
+    printValue('FizzBuzz');
+   } else {
+ // If not, print 'Fizz'.
+    printValue('Fizz');
+   }
+ } else if (counter % 5 === 0) {
+   // If it's not divisible by 3, but it IS evenly divisible by 5, print 'Buzz'.
+    printValue('Buzz');
+ } else {
+//  Otherwise, just print the number.
+    printValue(counter);
+ }
+ 
+ counter = counter + 1;
+}
+
+// let counter = 1
+//   while (counter<=userValue){
+//     if (userValue % 3 === 0){
+//     printValue('Fizz')
+//   }
+//     if(userValue % 5 === 0){
+//     printValue('Buzz')
+//   }
+//     if(userValue % 5 === 0 && userValue % 3 === 0){
+//     printValue('FizzBuzz')
+//     }
+
+//   else (printvalue(userValue))
+
+//   counter = counter + 1;
+// }
 
   /*
     Stretch goal TODO:
